@@ -84,10 +84,6 @@ def main(url):
     print("Fifth hour with", hour_list.count(4), "hits")
     print("Sixth hour with", hour_list.count(5), "hits")
 
-
-
-
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--url", help="URL to the datafile", type=str, required=True)
