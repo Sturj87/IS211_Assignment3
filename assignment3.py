@@ -44,7 +44,7 @@ def main(url):
     percentage = "{:.0%}".format(pt)
     print("Image requests account for", percentage, "of all requests")
 
-    # Determine the most searched browser in the file
+    # Determine the  browser with the highest hits
 
     csv_browsers = {}
     Firefox = Chrome = MSIE = Safari = 0
