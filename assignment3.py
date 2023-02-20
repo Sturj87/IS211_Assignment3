@@ -7,6 +7,8 @@ import urllib.request
 
 
 # Saar T. IS211 CUNYSPS SPRING 2023
+# --url http://s3.amazonaws.com/cuny-is211-spring2015/weblog.csv
+
 
 def download_data(url):
     """
@@ -71,8 +73,8 @@ def main(url):
     url_data = download_data(url)
     csv_data = csv.reader(io.StringIO(url_data))
     for row in csv_data:
-        format = '%Y-%m-%d %H:%M:%S'
-        hour_time = datetime.datetime.strptime(row[1], format)
+        time_format = '%Y-%m-%d %H:%M:%S'
+        hour_time = datetime.datetime.strptime(row[1], time_format)
         hour = hour_time.hour
         hour_list.append(hour)
     print("First hour with", hour_list.count(0), "hits")
